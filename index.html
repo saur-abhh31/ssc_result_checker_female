@@ -6,8 +6,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="brand-header">
+    <h1>SSC GD 2025 Female Result Checker</h1>
+    <p>By <strong>SSC CGL Vocabulary</strong></p>
+  </div>
+
   <div class="container">
-    <h2>SSC Selection Result</h2>
+    <h2>Check Your Selection</h2>
     <input type="text" id="roll_number" placeholder="Enter Roll Number" />
     <button onclick="checkResult()">Check Result</button>
     <div id="output"></div>
@@ -16,7 +21,7 @@
   <script>
     let results = {};
 
-    // Load JSON on page load
+    // Load results from JSON
     fetch('results.json')
       .then(response => response.json())
       .then(data => results = data);

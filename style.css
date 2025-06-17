@@ -2,14 +2,33 @@ body {
   font-family: Arial, sans-serif;
   background: #f3f3f3;
   text-align: center;
-  padding-top: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-header {
+  background-color: #004085;
+  color: white;
+  padding: 20px 10px 10px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.brand-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.brand-header p {
+  margin: 5px 0 10px;
+  font-size: 14px;
+  color: #dbe9ff;
 }
 
 .container {
   background: white;
   padding: 30px;
   max-width: 500px;
-  margin: auto;
+  margin: 40px auto;
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
 }

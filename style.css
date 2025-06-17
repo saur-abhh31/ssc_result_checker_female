@@ -1,41 +1,30 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f3f3f3;
+  background-color: #f5f5f5;
   text-align: center;
-  padding: 0;
-  margin: 0;
+  padding: 40px;
 }
 
 .brand-header {
-  background-color: #004085;
-  color: white;
-  padding: 20px 10px 10px 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
-.brand-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-.brand-header p {
-  margin: 5px 0 10px;
-  font-size: 14px;
-  color: #dbe9ff;
+h1 {
+  color: #333;
 }
 
 .container {
-  background: white;
+  background-color: white;
   padding: 30px;
-  max-width: 500px;
-  margin: 40px auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"] {
-  width: 70%;
-  padding: 10px;
+  width: 80%;
+  padding: 12px;
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -43,15 +32,25 @@ input[type="text"] {
 button {
   padding: 10px 20px;
   font-size: 16px;
+  background-color: #28a745;
+  border: none;
+  color: white;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .success {
-  color: green;
   margin-top: 20px;
+  padding: 15px;
+  background-color: #d4edda;
+  border-left: 6px solid #28a745;
+  text-align: left;
 }
 
 .error {
-  color: red;
   margin-top: 20px;
+  padding: 15px;
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+  text-align: left;
 }

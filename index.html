@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSC Result Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>SSC Selection Result</h2>
+    <input type="text" id="roll_number" placeholder="Enter Roll Number" />
+    <button onclick="checkResult()">Check Result</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    let results = {};
+
+    // Load JSON on page load
+    fetch('results.json')
+      .then(response => response.json())
+      .then(data => results = data);
+
+    function checkResult() {
+      const roll = document.getElementById("roll_number").value.trim();
+      const output = document.getElementById("output");
+      output.innerHTML = "Checking...";
+
+      if (results[roll]) {
+        const data = results[roll];
+        output.innerHTML = `
+          <div class="success">
+            <h3>YOU ARE SELECTED ✅</h3>
+            <p><strong>Roll Number:</strong> ${data.roll_number}</p>
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Father's Name:</strong> ${data.father_name}</p>
+            <p><strong>Mother's Name:</strong> ${data.mother_name}</p>
+          </div>
+        `;
+      } else {
+        output.innerHTML = `<div class="error">❌ Sorry, you are not selected.</div>`;
+      }
+    }
+  </script>
+</body>
+</html>
